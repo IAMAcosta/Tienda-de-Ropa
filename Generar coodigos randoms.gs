@@ -27,9 +27,9 @@ function generarVariosCodigosCompra(cantidad) {
 function llenarCodigosCompras() {
   var hojaCodigos = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Compras_Validadas");
   
-  var letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // Letras del alfabeto
-  var numeros = "0123456789"; // Números del 0 al 9
-  var cantidadCodigos = 10; // Cambia esto a la cantidad de códigos que quieras generar
+  var letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
+  var numeros = "0123456789"; 
+  var cantidadCodigos = 10; 
   var codigosGenerados = [];
 
   // Generar códigos únicos
@@ -54,7 +54,7 @@ function llenarCodigosCompras() {
   
   // Escribir los códigos en la hoja
   for (var k = 0; k < codigosGenerados.length; k++) {
-    hojaCodigos.getRange(k + 2, 1).setValue(codigosGenerados[k]); // Escribe en la columna A, comenzando desde la fila 2
+    hojaCodigos.getRange(k + 2, 1).setValue(codigosGenerados[k]); 
   }
 }
 
